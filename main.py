@@ -1,19 +1,6 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
-a = 3
-b = 3
-print(a, b)
+# EXERCISE 2.1
+# Create a long positive integer. Find the number of zeros. Hint: change the number to a string
+long_positive_int = 2330404500
+long_positive_int_as_string = (str(long_positive_int))
+print(long_positive_int_as_string.count("0"))
