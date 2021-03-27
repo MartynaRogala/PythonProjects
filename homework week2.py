@@ -1,5 +1,4 @@
 print("EXERCISE 2.1", "\n")
-# Create a long positive integer. Find the number of zeros. Hint: change the number to a string.
 long_positive_int = 12340055670
 long_positive_int_as_string = str(long_positive_int)
 print("Number of zeros in number", str(long_positive_int), "is: ", long_positive_int_as_string.count("0"))
@@ -16,7 +15,6 @@ print(isinstance(True, bool), "because 'True' can be treated as bool")
 print("")
 
 print("EXERCISE 2.3 (NUMBERS)", "\n")
-# Find the sum 1*1 + 3*3 + 5*5 + ... + 2021*2021 [hint: use sum()].
 start = 1
 stop = 2022
 step = 2
@@ -73,6 +71,8 @@ for char in range(pt_size):
     print("|{0:>3}|{1:<20}|{2:^6}|{3:>10}|".format(pt[char][0], pt[char][1], pt[char][2], pt[char][3]))
 print(frame)
 print("")
+# W linijce 67 chciałam zrobić tak: print("|{0:>3}|{1:<20}|{2:^6}|{3:>10}|".format(titles), ale nie chciał mi pobrać listy... Czy może Pan wytłumaczyć dlaczego musiałam w metodzie format wpisać kolejne indeksy listy "titles'?
+# W linijce 71 podobnie. Nie działało jak odwołałam się do listy pt.
 
 print("EXERCISE 2.5 (LIST)", "\n")
 S = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
