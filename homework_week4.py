@@ -1,4 +1,4 @@
-print("EXERCISE 4.1")
+# print("EXERCISE 4.1")
 import math
 
 print("Point p = (x,y)")
@@ -16,5 +16,43 @@ point_list.sort(key=lambda p: (p))
 print("List of sample p sorted by increasing x: ", point_list)
 point_list.sort(key=lambda p: sum((abs(p[0]), abs(p[1]))))
 print("List of sample p sorted by sum |x|+|y|: ", point_list)
-
+print("")
 # Pozwoliłam sobie stworzyć również narzędzie umożliwiające użytkownikowi samemu wpisać x i y.
+print("EXERCISE 4.2")
+print("")
+print("EXERCISE 4.3")
+user_range = (int(input("Enter range for generators: ")))
+print("(a) Result of generator 'iter_even()' producing even numbers in in range", user_range, "is: ")
+
+
+def iter_even(x):
+    for i in range(x):
+        if i % 2 == 0:
+            yield i
+
+
+result = list(iter_even(user_range))
+print(result)
+print("(b) Result of generator 'iter_odd()' producing odd numbers in in range", user_range, "is: ")
+
+
+def iter_even(x):
+    for i in range(x):
+        if i % 2 != 0:
+            yield i
+
+
+result = list(iter_even(user_range))
+print(result)
+k = (int(input("Enter k for generator (c): ")))
+print(user_range)
+print("(c) Result of generator 'iter_power(k)' producing powers of k in in range", user_range, "is: ")
+
+
+def iter_power(k):
+    for i in range(0, user_range):
+        yield math.pow(k, i)
+
+
+result = list(iter_power(k))
+print(result)
