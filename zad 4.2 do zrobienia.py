@@ -13,10 +13,19 @@ def reverse(seq, start, stop):
     size = stop + start
     for i in range(start, stop):
         j = size - i
-        seq[i], seq[j] = seq[j], seq[i]
+        seq[i], seq[j] = seq[j], seq[i] #nie rozumiem co tu sie dzieje ale jesli to jest to co obracaca to uzyj w rekruencji
 
 l = list(range(10))
 print(l)
 reverse(l, 2, 5)
 print(l)
 
+## powinnas jesli chcesz rekurencje to powinnaś zrobic cos w stylu 
+
+def recusive_reverse(seq, start, stop):
+    if(len(size) == 1) #jesli duglosc listy jest 1 
+        return seq[0]
+    else
+    # obroć liste coś takiego 
+    
+# nie mam pyharma wiec ciezko mi to jednak ogarnac jak wroce do domu to przekminimy
