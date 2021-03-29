@@ -1,4 +1,4 @@
-# print("EXERCISE 4.1")
+print("EXERCISE 4.1")
 import math
 
 print("Point p = (x,y)")
@@ -19,13 +19,27 @@ print("List of sample p sorted by sum |x|+|y|: ", point_list)
 print("")
 # Pozwoliłam sobie stworzyć również narzędzie umożliwiające użytkownikowi samemu wpisać x i y.
 print("EXERCISE 4.2")
+#Przepraszam, ale wstawię tylko sposób iterative na odwrócenie całej listy. Nie starczyło mi czasu by rozwiązać
+# zadanie w podany sposób. Wiem, że powinnam we wnętrzu listy obrócić jej kawałek.
+ran = (int(input("Enter range for list : ")))
+l = list(range(ran))
+l1 = []
+j = len(l)
+# loop in iterative way:
+while j > 0:
+    j -= 1
+    l1.append(l[j])
+
+print("Original list: ", l)
+print("Reversed list:: ", l1)
 print("")
 print("EXERCISE 4.3")
-user_range = (int(input("Enter range for generators: ")))
+user_range = (int(input("Enter range for generators (range > 0): ")))
 print("(a) Result of generator 'iter_even()' producing even numbers in in range", user_range, "is: ")
 
 
 def iter_even(x):
+    """Returns even numbers"""
     for i in range(x):
         if i % 2 == 0:
             yield i
@@ -37,6 +51,7 @@ print("(b) Result of generator 'iter_odd()' producing odd numbers in in range", 
 
 
 def iter_even(x):
+    """Returns odd numbers"""
     for i in range(x):
         if i % 2 != 0:
             yield i
@@ -44,12 +59,13 @@ def iter_even(x):
 
 result = list(iter_even(user_range))
 print(result)
-k = (int(input("Enter k for generator (c): ")))
+k = (float(input("Enter k for generator (c) : ")))
 print(user_range)
 print("(c) Result of generator 'iter_power(k)' producing powers of k in in range", user_range, "is: ")
 
 
 def iter_power(k):
+    """Returns powers of variable 'k' """
     for i in range(0, user_range):
         yield math.pow(k, i)
 
