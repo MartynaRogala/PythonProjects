@@ -61,3 +61,28 @@ find_axis(v1, v2)
 
 print("Unit vector perpendicular to the vectors v1 and v2 is: ", find_axis(v1, v2))
 print("Test if v3 is unit Vector: length of v3 is: ", find_axis(v1, v2).length())
+
+print("EXERCISE 7.2")
+
+import itertools
+import random
+
+
+def print01():
+    for i in itertools.cycle('01'):
+        print(i, end=", ")
+
+
+def printrandom01():
+    while True:
+        i = random.randint(0, 1)
+        print(i, end=',')
+
+
+def print0101():
+    for i in itertools.cycle((0, 1, 0, -1)):
+        print(i, end=", ")
+
+# print(print01())
+# print(printrandom01())
+# print(print0101())
