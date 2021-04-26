@@ -11,14 +11,10 @@ class Vector:
     def __eq__(self, other):
         if self.x == other.x and self.y == other.y and self.z == other.z:
             return True
-        else:
-            return False
 
     def __ne__(self, other):
         if self.x != other.x or self.y != other.y or self.z != other.z:
             return True
-        else:
-            return False
 
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y, self.z + other.z)
@@ -35,7 +31,7 @@ class Vector:
                       (self.x * other.y) - (self.y * other.x))
 
     def length(self):
-        return math.sqrt((self.x ** 2) + (self.y ** 2))
+        return math.sqrt((self.x ** 2) + (self.y ** 2) + (self.z ** 2))
 
     def __hash__(self):
         return hash((self.x, self.y, self.z))
@@ -53,8 +49,8 @@ assert v + w == Vector(3, 3, 3)
 assert v - w == Vector(-1, -1, -1)
 assert v * w == 6
 assert Vector.cross(v, w) == Vector(0, 0, 0)
-assert Vector.length(v) == math.sqrt(2)
-assert w.length() == math.sqrt(8)
+assert Vector.length(v) == math.sqrt(3)
+assert w.length() == math.sqrt(12)
 
 print("Tests passed")
 
